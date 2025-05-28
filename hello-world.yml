@@ -1,0 +1,19 @@
+name: Hello World Workflow
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello Message
+        run: echo "🎉 Hello, Chandrashekar! Welcome to GitHub Actions"
+
+      - name: Show the current directory
+        run: pwd
+
+      - name: List files in the repo
+        run: ls -la
+
+      - name: Print GitHub context
+        run: echo "${{ toJson(github) }}"
